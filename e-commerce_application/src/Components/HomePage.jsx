@@ -4,7 +4,8 @@ import Topbar from './Topbar'
 import { items } from '../Items'
 import "./HomePage.css";
 
-const HomePage = () => {
+const HomePage = (props) => {
+  
   return (
     <div>
         <Topbar/>

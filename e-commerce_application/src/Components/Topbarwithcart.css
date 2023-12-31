@@ -1,0 +1,36 @@
+.topbar{
+    background-color: black;
+    height: 75px;
+    display: flex;
+    position: relative;
+}
+
+.topbar_heading{
+    color: #fff;
+    text-align: left;
+    padding: 0px 0px 0px 15px;
+}
+
+.buttons{
+    margin-left: 1000px;    
+}
+
+.cart{
+    border-radius: 10px;
+    height: 35px;
+    text-align: right;
+    margin-left: 50px;
+    margin-top: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: transparent;
+}
+
+.cart:hover{
+    background-color: black;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+

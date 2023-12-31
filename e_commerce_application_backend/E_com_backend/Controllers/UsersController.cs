@@ -34,7 +34,8 @@ namespace E_com_backend.Controllers
                 return NotFound();
             }
 
-            return user;
+            return Ok(user.First_Name);
+
         }
 
         [HttpPost("Add User")]
@@ -53,7 +54,8 @@ namespace E_com_backend.Controllers
             if (IsValidUser(loginRequest.First_Name, loginRequest.Password))
             {
                 // Return a token or any information indicating successful login
-                return Ok(new { Message = "Login successful" });
+                return Ok(new { Message = "Login successful", UserName = loginRequest.First_Name });
+
             }
             else
             {
