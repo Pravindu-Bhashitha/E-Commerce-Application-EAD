@@ -5,11 +5,13 @@ import './HomePage.css';
 import Topbarwithcart from './Topbarwithcart';
 
 const LoggedHomePage = (props) => {
-  const username = props.location && props.location.state ? props.location.state.username : '';
+  console.log(props);
+  const userName = props?.location?.state?.userName || 'Guest';
+  console.log(userName);
   return (
-    <div>
+    <div>   
       <Topbarwithcart className="cart"/>
-      <h1>Hi logged {username}</h1>
+      <h1>Hi {userName}</h1>
       <div className='good_component'>
         {items.map(item => (
           <Good key={item.id} data={item} />

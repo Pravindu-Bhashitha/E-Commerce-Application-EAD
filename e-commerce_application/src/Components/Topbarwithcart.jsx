@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Topbarwithcart.css";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const Topbarwithcart = () => {
-    return (
+  const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
+
+  const handleLogout = () => {
+    setShowLogoutConfirmation(true);
+  };
+
+  const navigate = useNavigate();
+
+  const handleConfirmLogout = () => {
+    // Perform logout logic here
+    // For example, clear user session, navigate to the login page, etc.
+    // After handling the logout, close the confirmation overlay
+    navigate("/");
+    setShowLogoutConfirmation(false);
+  };
+
+  const handleCancelLogout = () => {
+    // User canceled the logout, close the confirmation overlay
+    setShowLogoutConfirmation(false);
+  };
+
+  return (
     <div className="topbar">
       <h1 className="topbar_heading">Welcome To Rurazz</h1>
       <div className="buttons">
-        <button className="login_button">
-            <MdOutlineShoppingCart />
+        <button className="cart">
+          <MdOutlineShoppingCart />
+        </button>
+        <button className="logout_button" onClick={handleLogout}>
+          Logout
         </button>
       </div>
+
+      {showLogoutConfirmation && (
+        <div className="logout-overlay">
+          <div className="confirmation-box">
+            <p>Are you sure you want to log out?</p>
+            <button onClick={handleConfirmLogout}>Yes</button>
+            <button onClick={handleCancelLogout}>No</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

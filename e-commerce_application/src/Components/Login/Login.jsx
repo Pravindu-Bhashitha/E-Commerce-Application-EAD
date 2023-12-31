@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Login = ({ setIsLoginOpen }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -23,8 +23,12 @@ const Login = ({ setIsLoginOpen }) => {
       });
       if (response.ok) {
         const data = await response.json();
-        const username = data.UserName;
-        navigate("/loggedhome", { state: "username" });
+        console.log(data);
+        const username = data.userName;
+        const message = data.message;
+        console.log(message);
+        console.log(username);
+        navigate('/loggedhome', { state: { userName: 'TestUser' } });
       } else {
         alert("Invalid email or password. Please try again.");
       }
