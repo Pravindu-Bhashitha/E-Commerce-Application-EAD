@@ -18,8 +18,9 @@
   border-radius: 5px;
   color: black;
   width: 50vw;
-  height: 50vh;
+  height: 60vh;
   font-weight: 1000;
+  overflow-y: auto;
 }
 
 .signup-box table {
@@ -29,7 +30,7 @@
 }
 
 .signup-box td {
-  font-size: 24px;
+  font-size: 1rem;
 }
 
 .signup-box input {
@@ -79,16 +80,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.warning-message {
-  color: red;
-  font-size: 8px;
-  margin-top: 5px;
-}
-
-.invalid {
-  border: 2px solid red;
 }
 
 .error {

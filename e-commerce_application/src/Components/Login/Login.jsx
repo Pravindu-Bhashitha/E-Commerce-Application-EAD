@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Login.css";
 import { GrClose } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Login = ({ setIsLoginOpen }) => {
   const [username, setUsername] = useState("");
@@ -10,6 +13,21 @@ const Login = ({ setIsLoginOpen }) => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
+    if(
+      password || username === ''
+    ){
+      toast.error("Please enter values.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
     try {
       const response = await fetch("http://localhost:15510/api/users/login", {
         method: "POST",
@@ -30,9 +48,28 @@ const Login = ({ setIsLoginOpen }) => {
         console.log(username);
         navigate('/loggedhome', { state: { userName: 'TestUser' } });
       } else {
-        alert("Invalid email or password. Please try again.");
+        toast.error("Invalid email or password. Please try again", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       }
     } catch (error) {
+      toast.error("Error during login:", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
       console.error("Error during login:", error);
     }
   };
@@ -80,6 +117,7 @@ const Login = ({ setIsLoginOpen }) => {
         <button className="login-box_login_btn" onClick={handleLogin}>
           Login
         </button>
+        <ToastContainer />
       </div>
     </div>
   );

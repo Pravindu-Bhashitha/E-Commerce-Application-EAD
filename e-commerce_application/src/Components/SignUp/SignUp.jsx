@@ -72,24 +72,45 @@ const SignUp = ({ setIsSignUpOpen }) => {
   };
 
   const handleSignUp = async () => {
+    if (
+      firstNameError ||
+      lastNameError ||
+      emailError ||
+      phoneNumberError ||
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phoneNumber ||
+      !password
+    ) {
+      toast.error("Please enter values correctly.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
+  
     try {
-      const response = await fetch(
-        "http://localhost:15510/api/users/Add User",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            First_Name: firstName,
-            Last_Name: lastName,
-            Email: email,
-            Phone_Number: phoneNumber,
-            Password: password,
-          }),
-        }
-      );
-
+      const response = await fetch("http://localhost:15510/api/users/Add User", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          First_Name: firstName,
+          Last_Name: lastName,
+          Email: email,
+          Phone_Number: phoneNumber,
+          Password: password,
+        }),
+      });
+  
       if (response.ok) {
         toast.success("Signup Successfully!", {
           position: "top-center",
