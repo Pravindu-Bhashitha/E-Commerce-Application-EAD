@@ -8,17 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoggedHomePage = (props) => {
   const userName = props?.location?.state?.userName || 'Guest';
-
-  useEffect(() => {
-    toast.success(`Welcome, ${userName}!`, {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-    });
-  }, [userName]);
   return (
     <div>
       <Topbarwithcart className="cart" />
