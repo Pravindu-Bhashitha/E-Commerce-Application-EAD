@@ -13,15 +13,11 @@ const Topbarwithcart = () => {
   const navigate = useNavigate();
 
   const handleConfirmLogout = () => {
-    // Perform logout logic here
-    // For example, clear user session, navigate to the login page, etc.
-    // After handling the logout, close the confirmation overlay
     navigate("/");
     setShowLogoutConfirmation(false);
   };
 
   const handleCancelLogout = () => {
-    // User canceled the logout, close the confirmation overlay
     setShowLogoutConfirmation(false);
   };
 

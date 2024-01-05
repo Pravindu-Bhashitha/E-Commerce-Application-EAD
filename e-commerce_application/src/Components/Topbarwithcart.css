@@ -1,97 +1,106 @@
-.topbar{
-    background-color: black;
-    height: 75px;
-    display: flex;
-    position: relative;
+.topbar {
+  background-color: black;
+  height: 75px;
+  display: flex;
+  position: relative;
 }
 
-.topbar_heading{
-    color: #fff;
-    text-align: left;
-    padding: 0px 0px 0px 15px;
+.topbar_heading {
+  color: #fff;
+  text-align: left;
+  padding: 0px 0px 0px 15px;
 }
 
-.buttons{
-    margin-left: 975px;
-    display: flex;
-    margin-top: 25px;
-    gap: 30px;
+.buttons {
+  margin-left: 975px;
+  display: flex;
+  margin-top: 25px;
+  gap: 30px;
 }
 
-.logout_button{
-    border-radius: 10px;
-    height: 35px;
-    text-align: right;
-    font-weight: bolder;
-    cursor: pointer;
-    border: transparent;
+.logout_button {
+  border-radius: 10px;
+  height: 35px;
+  text-align: right;
+  font-weight: bolder;
+  cursor: pointer;
+  border: transparent;
 }
 
-.logout_button:hover{
-    background-color: black;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: 0.5s;
+.logout_button:hover {
+  background-color: black;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.5s;
 }
 
-.cart{
-    border-radius: 10px;
-    height: 35px;
-    font-size: 25px;
-    cursor: pointer;
-    border: transparent;
-    background-color: #fff;
-    color: black;
+.cart {
+  border-radius: 10px;
+  height: 35px;
+  font-size: 25px;
+  cursor: pointer;
+  border: transparent;
+  background-color: #fff;
+  color: black;
 }
 
-.cart:hover{
-    background-color: black;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: 0.5s;
+.cart:hover {
+  background-color: black;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.5s;
 }
 
 .logout-overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 3; /* Set a higher z-index than the login overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .confirmation-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    color: black;
-    width: 30vw;
-    text-align: center;
+  to {
+    opacity: 1;
   }
-  
-  .confirmation-box p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .confirmation-box button {
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 2px solid black;
-    padding: 10px;
-    margin: 0 10px;
-  }
-  
-  .confirmation-box button:hover {
-    color: #fff;
-    background-color: black;
-    border: 2px solid #fff;
-    transition: 0.5s;
-  }
-  
+}
+
+.confirmation-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+  width: 30vw;
+  text-align: center;
+}
+
+.confirmation-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.confirmation-box button {
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.confirmation-box button:hover {
+  color: #fff;
+  background-color: black;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}

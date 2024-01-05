@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Good = ({data}) => {
   const location = useLocation();
   const path = location.pathname;
+  const { pathname } = location;
 
   const handleAddtoCart = () => {
     if (path === '/') {
@@ -21,9 +22,8 @@ const Good = ({data}) => {
         progress: undefined,
         theme: "dark",
       });
-      // alert("Please Login or Create an account");
     }
-    if (path === '/loggedhome') {
+    else if (pathname.startsWith('/loggedhome/')) {
       toast.success("Successfully Added to Cart", {
         position: "top-center",
         autoClose: 200,
@@ -34,7 +34,6 @@ const Good = ({data}) => {
         progress: undefined,
         theme: "dark",
       });
-      // alert("Successfully Added to Cart");
     }
   };
   return (
