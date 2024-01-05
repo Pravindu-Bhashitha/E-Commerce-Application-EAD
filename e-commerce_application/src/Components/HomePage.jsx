@@ -6,7 +6,7 @@ import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="Home-Whole-Component">
         <Topbar/>
         <div className='good_component'>
         {items.map(item => (

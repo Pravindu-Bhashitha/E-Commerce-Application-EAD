@@ -9,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 const Login = ({ setIsLoginOpen }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -44,7 +43,19 @@ const Login = ({ setIsLoginOpen }) => {
         const message = data.message;
         console.log(message);
         console.log(username);
-        navigate('/loggedhome', { state: { userName: 'TestUser' } });
+        // toast.success("Logged Successfully", {
+        //   position: "top-center",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "dark",
+        // });
+        setTimeout(() => {
+          navigate(`/loggedhome/${username}`);
+        }, 500); 
       } else {
         toast.error("Invalid email or password. Please try again", {
           position: "top-center",
@@ -73,6 +84,7 @@ const Login = ({ setIsLoginOpen }) => {
   };
   return (
     <div className="login-overlay">
+      <ToastContainer />
       <div className="login-box">
         <button
           onClick={() => setIsLoginOpen(false)}
@@ -115,7 +127,6 @@ const Login = ({ setIsLoginOpen }) => {
         <button className="login-box_login_btn" onClick={handleLogin}>
           Login
         </button>
-        <ToastContainer />
       </div>
     </div>
   );
