@@ -10,7 +10,7 @@ const HomePage = () => {
         <Topbar/>
         <div className='good_component'>
         {items.map(item => (
-            <Good key={item.id} data={item}/>
+            <Good key={item.id} data={item} />
         ))}
         </div>
     </div>
@@ -18,3 +18,4 @@ const HomePage = () => {
 }
 
 export default HomePage;
+

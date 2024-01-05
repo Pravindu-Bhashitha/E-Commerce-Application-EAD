@@ -13,10 +13,8 @@ const Login = ({ setIsLoginOpen }) => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    if(
-      password || username === ''
-    ){
-      toast.error("Please enter values.", {
+    if (!password || !username) {
+      toast.error("Please enter all the values.", {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import Good from './Good';
 import { items } from '../Items';
 import './HomePage.css';
 import Topbarwithcart from './Topbarwithcart';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoggedHomePage = (props) => {

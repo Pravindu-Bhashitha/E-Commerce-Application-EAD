@@ -58,6 +58,10 @@
   transition: 0.5s;
 }
 
+.login-box_login_btn:focus{
+  border: 3px solid black;
+}
+
 .login-box_close{
   background-color: transparent;
   border: transparent;
