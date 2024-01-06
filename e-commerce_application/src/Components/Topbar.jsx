@@ -16,9 +16,9 @@ const Topbar = () => {
   }
 
   return (
-    <div className={`topbar ${isLoginOpen || isSignUpOpen ? 'overlay' : ''}`}>
-      <h1 className="topbar_heading">Welcome To Rurazz</h1>
-      <div className="buttons">
+    <div className={`topbarwithoutcart ${isLoginOpen || isSignUpOpen ? 'overlay' : ''}`}>
+      <h1 className="topbarwithoutcart_heading">Welcome To Rurazz</h1>
+      <div className="buttonswithoutcar">
         <button className="login_button" onClick={handleLoginClick}>
           Login
         </button>

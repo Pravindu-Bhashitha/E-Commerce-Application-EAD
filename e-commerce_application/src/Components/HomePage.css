@@ -1,16 +1,61 @@
-.good_component{
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* flex-basis: 25%; */
+.Home-Whole-Component {
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.Logged-Home-Whole-Component{
-    animation: fadeIn 1s ease-in-out; 
-    }
-    
-   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+.good_component {
+  display: flex; /* Added flexbox for responsiveness */
+  flex-wrap: wrap;
+  margin: 0 4.5vw; /* Adjusted margins using viewport units */
+  gap: 0.5vw; /* Added gap for spacing between items */
+}
+
+.page-number-button {
+  /* Add your custom styles for page number buttons */
+  margin: 0 0.5rem; /* Adjusted margin using rem units */
+  padding: 0.5rem 1rem; /* Adjusted padding using rem units */
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 0.8rem; /* Adjusted font size using rem units */
+  border-radius: 0.5rem;
+}
+
+.page-number-button.active {
+  background-color: black;
+  color: #fff;
+  /* Add your styles for the active page number button */
+}
+
+
+
+/* @media (max-width: 60rem) {
+  .Logged-Home-Whole-Component {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .good_component {
+    display: flex; /* Added flexbox for responsiveness */
+    /* flex-wrap: wrap; */
+    /* margin: 0 0vw; Adjusted margins using viewport units */
+    /* gap: 0.5vw; Added gap for spacing between items */
+  /* }
+} */ 

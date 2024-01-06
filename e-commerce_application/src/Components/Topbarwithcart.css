@@ -1,27 +1,28 @@
 .topbar {
   background-color: black;
-  height: 75px;
+  max-height: 15rem;
   display: flex;
+  align-items: center; /* Added for vertical centering */
   position: relative;
+  width: 100%; /* Removed fixed width */
 }
 
 .topbar_heading {
   color: #fff;
   text-align: left;
-  padding: 0px 0px 0px 15px;
+  padding: 0rem 0rem 0rem 2rem;
 }
 
 .buttons {
-  margin-left: 975px;
+  margin-left: 60rem;
   display: flex;
-  margin-top: 25px;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .logout_button {
-  border-radius: 10px;
-  height: 35px;
-  text-align: right;
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  /* text-align: right; */
   font-weight: bolder;
   cursor: pointer;
   border: transparent;
@@ -30,24 +31,24 @@
 .logout_button:hover {
   background-color: black;
   color: #fff;
-  border: 1px solid #fff;
+  border: 0.05rem solid #fff;
   transition: 0.5s;
 }
 
 .cart {
-  border-radius: 10px;
-  height: 35px;
-  font-size: 25px;
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  /* text-align: right; */
+  font-weight: bolder;
   cursor: pointer;
   border: transparent;
-  background-color: #fff;
-  color: black;
+  font-size: 2rem;
 }
 
 .cart:hover {
   background-color: black;
   color: #fff;
-  border: 1px solid #fff;
+  border: 0.05rem solid #fff;
   transition: 0.5s;
 }
 
@@ -76,31 +77,32 @@
 
 .confirmation-box {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 2rem;
+  border-radius: 1rem;
   color: black;
   width: 30vw;
   text-align: center;
 }
 
 .confirmation-box p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .confirmation-box button {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
-  border: 2px solid black;
-  padding: 10px;
+  border: 0.05rem solid black;
+  padding: 0.25rem;
   margin: 0 10px;
+  width: 18%;
 }
 
 .confirmation-box button:hover {
   color: #fff;
   background-color: black;
-  border: 2px solid #fff;
+  border: 0.05rem solid #fff;
   transition: 0.5s;
 }

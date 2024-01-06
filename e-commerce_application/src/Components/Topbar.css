@@ -1,68 +1,100 @@
-.topbar{
-    background-color: black;
-    height: 75px;
+.topbarwithoutcart {
+  background-color: black;
+  max-height: 15rem;
+  display: flex;
+  align-items: center; /* Added for vertical centering */
+  position: relative;
+  width: 100%; /* Removed fixed width */
+}
+
+.topbarwithoutcart_heading {
+  color: #fff;
+  text-align: left;
+  padding: 0rem 0rem 0rem 2rem;
+}
+
+.buttonswithoutcar {
+  /* margin-left: 60rem;
     display: flex;
-    position: relative;
+    margin-top: 2rem;
+    gap: 2rem; */
+  /* margin-left: auto; Use auto margin for flexible spacing */
+  /* margin-right: auto;  */
+  margin-left: 60rem;
+  display: flex;
+  gap: 2rem;
+}   
+
+.login_button {
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  /* text-align: right; */
+  font-weight: bolder;
+  cursor: pointer;
+  border: transparent;
 }
 
-.topbar_heading{
-    color: #fff;
-    text-align: left;
-    padding: 0px 0px 0px 15px;
+.login_button:hover {
+  background-color: black;
+  color: #fff;
+  border: 0.05rem solid #fff;
+  transition: 0.5s;
 }
 
-.buttons{
-    margin-left: 975px;
-    display: flex;
-    margin-top: 25px;
-    gap: 30px;
+.signup_button {
+  border-radius: 0.5rem;
+  height: 2.25rem;
+  /* text-align: right; */
+  font-weight: bolder;
+  cursor: pointer;
+  border: transparent;
 }
 
-.login_button{
-    border-radius: 10px;
-    height: 35px;
-    text-align: right;
-    font-weight: bolder;
-    cursor: pointer;
-    border: transparent;
-}
-
-.login_button:hover{
-    background-color: black;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: 0.5s;
-}
-
-.signup_button{
-    border-radius: 10px;
-    height: 35px;
-    text-align: right;
-    font-weight: bolder;
-    cursor: pointer;
-    border: transparent;
-}
-
-.signup_button:hover{
-    background-color: black;
-    color: #fff;
-    border: 1px solid #fff;
-    transition: 0.5s;
+.signup_button:hover {
+  background-color: black;
+  color: #fff;
+  border: 0.05rem solid #fff;
+  transition: 0.5s;
 }
 
 .overlay {
-    background-color: black;
+  /* background-color: black;
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
-    animation: fadeIn 0.5s ease-in-out; 
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+    animation: fadeIn 0.5s ease-in-out;  */
+  position: fixed; /* Ensure overlay covers entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
+@media (min-width: 20rem) {
+  .topbarwithoutcart {
+    background-color: black;
+    max-height: 15rem;
+    display: flex;
+    position: relative;
+    max-width: 200rem;
+  }
+
+  .topbarwithoutcart_heading {
+    color: #fff;
+    text-align: left;
+    padding: 0rem 0rem 0rem 2rem;
+  }
+}

@@ -59,4 +59,44 @@ export const items = [
         imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU",
         category:"Tab"
     },
+    {
+        id:"id 7",
+        title:"title 7",
+        description:"item 4",
+        price:105000.00,
+        quantity:10,
+        brand:"brand 4 ",
+        imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU",
+        category:"Tab"
+    },
+    {
+        id:"id 8",
+        title:"title 8",
+        description:"item 4",
+        price:105000.00,
+        quantity:10,
+        brand:"brand 4 ",
+        imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU",
+        category:"Tab"
+    },
+    {
+        id:"id 9",
+        title:"title 9",
+        description:"item 4",
+        price:105000.00,
+        quantity:10,
+        brand:"brand 4 ",
+        imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU",
+        category:"Tab"
+    },
+    {
+        id:"id 10",
+        title:"title 10",
+        description:"item 4",
+        price:105000.00,
+        quantity:10,
+        brand:"brand 4 ",
+        imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU",
+        category:"Tab"
+    },
 ]
