@@ -28,6 +28,12 @@
   cursor: pointer;
   font-size: 0.8rem; /* Adjusted font size using rem units */
   border-radius: 0.5rem;
+  text-align: center;
+}
+
+.page-number-button:hover{
+  color: #fff;
+  background-color: black;
 }
 
 .page-number-button.active {
@@ -36,7 +42,12 @@
   /* Add your styles for the active page number button */
 }
 
-
+.page-number-button.ellipsis {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+  font-weight: bold;
+}
 
 /* @media (max-width: 60rem) {
   .Logged-Home-Whole-Component {

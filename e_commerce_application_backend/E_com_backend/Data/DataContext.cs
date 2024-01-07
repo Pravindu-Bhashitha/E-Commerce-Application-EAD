@@ -15,6 +15,7 @@ namespace E_com_backend.Data
             modelBuilder.Entity<Users>().HasKey(u => u.User_id);
 
             // Other configurations...
+            modelBuilder.Entity<Product>().HasKey(u => u.Id);
 
             base.OnModelCreating(modelBuilder);
         }
