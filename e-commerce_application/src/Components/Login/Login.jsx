@@ -43,16 +43,6 @@ const Login = ({ setIsLoginOpen }) => {
         const message = data.message;
         console.log(message);
         console.log(username);
-        // toast.success("Logged Successfully", {
-        //   position: "top-center",
-        //   autoClose: 5000,
-        //   hideProgressBar: false,
-        //   closeOnClick: true,
-        //   pauseOnHover: true,
-        //   draggable: true,
-        //   progress: undefined,
-        //   theme: "dark",
-        // });
         setTimeout(() => {
           navigate(`/loggedhome/${username}`);
         }, 500); 

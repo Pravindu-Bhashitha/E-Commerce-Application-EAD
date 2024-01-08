@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Good from './Good';
 import Topbar from './Topbar';
-import { items } from '../Items';
 import "./HomePage.css";
 
 const itemsPerPage = 8;
 
 const HomePage = () => {
+  const [productDetails, setProductDetails] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    const fetchProductDetails = async () => {
+      try {
+        const response = await fetch("http://localhost:15510/api/ProductContoller/AllProductDetails");
+        const data = await response.json();
+        console.log(data);
+        setProductDetails(data);
+      } catch (error) {
+        console.error('Error fetching product details:', error);
+      }
+    };
+    fetchProductDetails();
+  }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = productDetails.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const totalPages = Math.ceil(productDetails.length / itemsPerPage);
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -23,12 +37,12 @@ const HomePage = () => {
     <div className="Home-Whole-Component">
       <Topbar />
       <div className='good_component'>
-        {currentItems.map(item => (
-          <Good key={item.id} data={item} />
+        {currentItems.map((data) => (
+          <Good key={data.id} data={data}/>
         ))}
       </div>
       <div className="pagination">
-        {Array.from({ length: totalPages }, (_, index) => index + 1).map(page => (
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
           <button
             key={page}
             onClick={() => handlePageChange(page)}
