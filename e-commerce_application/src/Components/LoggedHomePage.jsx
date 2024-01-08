@@ -157,6 +157,7 @@ import Topbarwithcart from "./Topbarwithcart";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./Footer";
 
 const itemsPerPage = 8;
 const LoggedHomePage = (props) => {
@@ -216,6 +217,7 @@ const LoggedHomePage = (props) => {
           )
         )}
       </div>
+      <Footer/>
     </div>
   );
 };

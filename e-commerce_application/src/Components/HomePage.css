@@ -17,6 +17,7 @@
   flex-wrap: wrap;
   margin: 0 4.5vw; /* Adjusted margins using viewport units */
   gap: 0.5vw; /* Added gap for spacing between items */
+  height: 50rem;
 }
 
 .page-number-button {

@@ -10,11 +10,11 @@ INSERT INTO Products (Price, Name, Description, ImgUrl, Category, Quantity)
 VALUES (95000, 'Tab','This is a Tab',
 'https://www.laptop.lk/wp-content/uploads/2023/04/Dell-5525-G15-Gaming-Laptop-%E2%80%93-R5.jpg','Tab',30);
 INSERT INTO Products (Price, Name, Description, ImgUrl, Category, Quantity)
-VALUES (400000, 'Laptop','This is a Laptop',
-'https://www.dellstore.com/pub/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/d/5/d560824win9b.jpeg','Laptop',10);
+VALUES (375000, 'Laptop','This is a Laptop',
+'https://www.dellstore.com/pub/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/d/5/d560824win9b.jpeg','Laptop',14);
 INSERT INTO Products (Price, Name, Description, ImgUrl, Category, Quantity)
 VALUES (65000, 'Mobile','This is a Mobile',
 'https://i01.appmifile.com/webfile/globalimg/in/cms/303D1336-249C-0113-DA94-01ED533069F8.jpg','Mobile',12);
 INSERT INTO Products (Price, Name, Description, ImgUrl, Category, Quantity)
-VALUES (105000, 'Tab','This is a Tab',
-'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU','Tab',5);
+VALUES (200000, 'Tab','This is a Tab',
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa8qlOReJYAq3s3csydDhce1KjVd5jfIeoeVh-rMTC2wFWLDhxWneHWxAB2i75Osfi2_c&usqp=CAU','Tab',8);

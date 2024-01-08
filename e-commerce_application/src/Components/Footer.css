@@ -1,0 +1,30 @@
+.footer {
+    background-color: black;
+    color: #fff;
+    height: 7.5rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.follow-us-on-paragraph {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 0.2rem;
+}
+
+.footer-buttons {
+    background-color: black;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: #fff;
+    border: transparent;
+    font-size: 1.5rem;
+}
+
+.All-rights-reserved{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+

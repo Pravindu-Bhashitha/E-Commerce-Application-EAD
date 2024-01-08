@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Good from './Good';
 import Topbar from './Topbar';
 import "./HomePage.css";
+import Footer from './Footer';
 
 const itemsPerPage = 8;
 
@@ -52,6 +53,7 @@ const HomePage = () => {
           </button>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };
