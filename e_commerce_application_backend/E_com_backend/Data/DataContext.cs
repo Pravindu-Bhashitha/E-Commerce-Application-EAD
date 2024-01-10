@@ -9,6 +9,7 @@ namespace E_com_backend.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Explicitly define the primary key for Users
@@ -16,6 +17,12 @@ namespace E_com_backend.Data
 
             // Other configurations...
             modelBuilder.Entity<Product>().HasKey(u => u.Id);
+
+            modelBuilder.Entity<CartItem>()
+                .HasOne(u => u.Product)
+                .WithMany(p => p.CartItems)
+                .HasForeignKey(c => c.CartItemId);
+              
 
             base.OnModelCreating(modelBuilder);
         }

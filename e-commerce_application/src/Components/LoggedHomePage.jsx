@@ -154,7 +154,7 @@ import Good from "./Good";
 import { items } from "../Items";
 import "./LoggedHome.css"; // Import the updated CSS
 import Topbarwithcart from "./Topbarwithcart";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Footer";
@@ -165,6 +165,7 @@ const LoggedHomePage = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const params = useParams();
   const username = params.username;
+  const location = useLocation();
 
   useEffect(() => {
     const fetchProductDetails = async () => {
@@ -192,8 +193,13 @@ const LoggedHomePage = (props) => {
     setCurrentPage(newPage);
   };
 
+  const targetElement = document.querySelector(".Logged-Home-Whole-Component");
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <div className="Home-Whole-Component">
+    <div className="Logged-Home-Whole-Component">
       <ToastContainer />
       <Topbarwithcart className="cart" />
       <h1 className="welcome-message">Welcome Back {username}</h1>
@@ -217,7 +223,7 @@ const LoggedHomePage = (props) => {
           )
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

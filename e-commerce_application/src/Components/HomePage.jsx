@@ -34,6 +34,11 @@ const HomePage = () => {
     setCurrentPage(newPage);
   };
 
+  const targetElement = document.querySelector(".Home-Whole-Component");
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="Home-Whole-Component">
       <Topbar />

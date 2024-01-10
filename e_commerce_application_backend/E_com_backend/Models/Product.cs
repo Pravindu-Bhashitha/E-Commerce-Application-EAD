@@ -9,5 +9,6 @@
         public string ImgUrl { get; set; }
         public string Category { get; set; }
         public int Quantity { get; set; }  // New property
+        public ICollection<CartItem> CartItems { get; set; }
     }
 }

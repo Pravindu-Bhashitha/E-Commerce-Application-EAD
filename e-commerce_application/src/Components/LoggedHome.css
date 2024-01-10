@@ -1,8 +1,6 @@
 .good_component{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* flex-basis: 25%; */
 }
 
 .Logged-Home-Whole-Component{
