@@ -151,11 +151,10 @@
 
 import React, { useEffect, useState } from "react";
 import Good from "./Good";
-import { items } from "../Items";
 import "./LoggedHome.css"; // Import the updated CSS
 import Topbarwithcart from "./Topbarwithcart";
-import { useLocation, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { useParams } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Footer";
 
@@ -165,7 +164,7 @@ const LoggedHomePage = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const params = useParams();
   const username = params.username;
-  const location = useLocation();
+  
 
   useEffect(() => {
     const fetchProductDetails = async () => {
