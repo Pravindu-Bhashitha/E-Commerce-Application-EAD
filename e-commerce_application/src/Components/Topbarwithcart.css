@@ -188,3 +188,43 @@
 .profile-details-box input:focus {
   border: 3px solid black;
 }
+
+.edit-button {
+  border-radius: 0.5rem;
+  height: 3rem;
+  /* text-align: right; */
+  font-weight: 500;
+  cursor: pointer;
+  border: transparent;
+  font-size: 1.5rem;
+  margin: 2rem;
+  background-color: yellow;
+  color: rgb(54, 53, 53);
+}
+
+.edit-button:hover {
+  background-color: yellow;
+  color: #fff;
+  border: 0.05rem solid #fff;
+  transition: 0.5s;
+}
+
+.paaswordchange-button{
+  border-radius: 0.5rem;
+  height: 3rem;
+  /* text-align: right; */
+  font-weight: 500;
+  cursor: pointer;
+  border: transparent;
+  font-size: 1.5rem;
+  margin: 2rem;
+  background-color: red;
+  color: black;
+}
+
+.paaswordchange-button:hover{
+  background-color: red;
+  color: #fff;
+  border: 0.05rem solid #fff;
+  transition: 0.5s;
+}

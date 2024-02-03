@@ -155,6 +155,8 @@ const Topbarwithcart = () => {
                 </td>
               </tr>
             </table>
+            <button className="edit-button">Edit</button>
+            <button className="paaswordchange-button">Change Password</button>
           </div>
         </div>
       )}
