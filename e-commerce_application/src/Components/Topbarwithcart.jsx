@@ -92,9 +92,9 @@ const Topbarwithcart = () => {
             alt="User_Photo"
             className="user-profile-img"
           ></img>
-          {showMessage && (
+          {/* {showMessage && (
             <div className="user-profile-message">View Profile</div>
-          )}
+          )} */}
         </div>
       </div>
 
