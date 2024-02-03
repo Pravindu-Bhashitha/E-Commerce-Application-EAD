@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Topbarwithcart.css";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Topbarwithcart = () => {
   const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const [showUserProfileMessage, setShowUserProfileMessage] = useState(false);
+  const [userDetails, setUserDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
 
   const handleLogout = () => {
     setShowLogoutConfirmation(true);
@@ -30,9 +36,35 @@ const Topbarwithcart = () => {
   const handleMouseLeave = () => {
     setShowMessage(false);
   };
+  const location = useLocation();
+  const handleUserProfileClick = async () => {
+    try {
+      const userId = location.pathname.split("/")[2];
+      console.log(userId)
+      const response = await fetch(
+        `http://localhost:15510/api/Users/UserDetails?id=${userId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // You may need to include credentials: 'include' if you have CORS issues
+          // credentials: 'include',
+        }
+      );
 
-  const handleUserProfileClick = () => {
-    setShowUserProfileMessage(true);
+      if (response.ok) {
+        const data = await response.json();
+        setUserDetails(data);
+        console.log(data)
+        setShowUserProfileMessage(true);
+      } else {
+        // Handle error
+        console.error("Failed to fetch user details");
+      }
+    } catch (error) {
+      console.error("Error during fetch:", error);
+    }
   };
 
   const handleUserProfileMessageClose = () => {
@@ -92,7 +124,7 @@ const Topbarwithcart = () => {
                 </td>
                 <td>:</td>
                 <td>
-                  <input placeholder="First Name" />
+                  <input value={userDetails.firstName} readOnly />
                 </td>
               </tr>
               <tr>
@@ -101,7 +133,7 @@ const Topbarwithcart = () => {
                 </td>
                 <td>:</td>
                 <td>
-                  <input placeholder="Last Name" />
+                  <input value={userDetails.lastName} readOnly />
                 </td>
               </tr>
               <tr>
@@ -110,7 +142,7 @@ const Topbarwithcart = () => {
                 </td>
                 <td>:</td>
                 <td>
-                  <input placeholder="Email" />
+                  <input value={userDetails.email} readOnly />
                 </td>
               </tr>
               <tr>
@@ -119,16 +151,7 @@ const Topbarwithcart = () => {
                 </td>
                 <td>:</td>
                 <td>
-                  <input placeholder="Phone Number" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label>Password</label>
-                </td>
-                <td>:</td>
-                <td>
-                  <input placeholder="Password" />
+                  <input value={userDetails.phoneNumber} readOnly />
                 </td>
               </tr>
             </table>

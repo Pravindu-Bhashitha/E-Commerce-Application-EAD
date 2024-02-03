@@ -41,10 +41,12 @@ const Login = ({ setIsLoginOpen }) => {
         console.log(data);
         const username = data.userName;
         const message = data.message;
+        const id = data.userId;
         console.log(message);
         console.log(username);
+        console.log(id);
         setTimeout(() => {
-          navigate(`/loggedhome/${username}`);
+          navigate(`/loggedhome/${id}/${username}`);
         }, 500); 
       } else {
         toast.error("Invalid email or password. Please try again", {
